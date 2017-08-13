@@ -1,0 +1,70 @@
+.public-header{
+	height: 110px;
+	/*background: red;*/}
+.public-header  .header-logo{
+	float:left;
+	
+	
+	margin-top: 38px;
+}
+.public-header  .header-logo a{
+	height:54px;
+	width: 182px;
+	background:url(../img/index-header-logo.png);
+}
+.public-header  .header-nav{
+	float: right;
+	
+	
+}
+.public-header  .header-nav .item{
+	float: left;
+	margin-top: 42px;
+	margin-left: 50px;
+	font-size: 17px;
+	
+	
+	
+}
+.public-header  .header-nav  a{
+	color: #3b3b3b;
+	}
+	.public-header  .header-nav  a:hover{
+		text-decoration: underline;
+	}
+.public-container{
+	width: 1100px;
+	position:relative;
+	margin:0 auto;
+	
+	/*background:#ccc;*/
+}
+.public-footer{
+	height: 216px;
+	background: #3b3b3b;
+	padding-top: 100px;
+	margin-top: 200px;
+}
+.public-footer .footer-col{
+	width: 230px;
+	float: left;
+	margin-right: 60px;
+	font-size: 14px;
+	line-height: 1.8;
+	
+	color: #FFFFFF;
+}
+.public-footer .footer-col a{
+	color: #fff
+}
+.public-footer .footer-col-last{
+	margin-right: 0;
+	color: #FFFFFF;
+}
+.public-footer .footer-logo{
+	background:url(../img/footer-logo.png);
+	width: 182px;
+	height: 55px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}

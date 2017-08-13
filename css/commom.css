@@ -60,6 +60,12 @@
 .public-footer .footer-col-last{
 	margin-right: 0;
 	color: #FFFFFF;
+	width: 230px;
+	float: left;
+	
+	font-size: 14px;
+	line-height: 1.8;
+	
 }
 .public-footer .footer-logo{
 	background:url(../img/footer-logo.png);
@@ -67,4 +73,5 @@
 	height: 55px;
 	margin-top: -10px;
 	margin-bottom: 10px;
+	
 }

@@ -1,10 +1,65 @@
 .index-banner{
 	position: relative;	
+	
+	width: 1347px;
+	height: 500px; 
+	border: 1px solid #ccc; 
+	overflow: hidden; 
 }
 .index-banner-bg{
-	height: 570px;
-	overflow: hidden;
+	height: 500px;
+	width: 9429px;
+	/*overflow: hidden;*/
+	position: absolute;
+	z-index: 1;
 }
+.index-banner-bg img { 
+	float: left;
+	width: 1347px;
+	height: 500px; 
+}
+#buttons { 
+	position: absolute;
+	 height: 10px; 
+	 width: 100px; 
+	 z-index: 2; 
+	 bottom: 20px; 
+	 left: 636px;
+}
+#buttons span {
+	cursor: pointer; 
+	float: left;
+	border: 1px solid #fff; 
+	width: 10px; 
+	height: 10px;
+	border-radius: 50%; 
+	background: #333; 
+	margin-right: 5px;
+}
+#buttons .on { 
+	background: orangered;
+}
+.arrow { 
+	cursor: pointer; 
+	/*display: none; */
+	line-height: 39px; 
+	text-align: center; 
+	font-size: 36px; 
+	font-weight: bold; 
+	width: 40px; 
+	height: 40px;  
+	position: absolute; 
+	z-index: 2; 
+	top: 240px; 
+	background-color: RGBA(0,0,0,.3); 
+	color: #fff;
+}
+.arrow:hover { 
+	background-color: RGBA(0,0,0,.7);
+}
+#container:hover .arrow { display: block;}
+#prev { left: 60px;}
+#next { right: 60px;}
 .index-banner-text{
 	position: absolute;
 	top: 200px;
@@ -112,7 +167,7 @@
 }
 .index-menu .menu-more-btn{	
 	margin: 0 auto;
-	width: 117px;
+	width: 130px;
 	height: 33px;
 	padding-left: 16px;	
 	border: 1px solid #d7d5d5;
@@ -120,18 +175,34 @@
 	font-size: 14px;
 	line-height: 32px;/*怎么测量啊*/
 	color: #b7b7b7;
-	
-		
+	display: block;		
 }
-.index-menu .menu-more-btn .icon{
+.index-menu .pick-up-btn{	
+	margin: 0 auto;
+	width: 130px;
+	height: 33px;
+	padding-left: 16px;	
+	border: 1px solid #d7d5d5;
+	*margin-top: 94px;
+	font-size: 14px;
+	line-height: 32px;/*怎么测量啊*/
+	color: #b7b7b7;
+	display: block;		
+}
+.index-menu  .icon{
 	display: inline-block;
 	width: 11px;
 	height:7px;
 	margin-left: 10px;
-	background: url(../img/menu-more-btn.png);
-	
+	background: url(../img/menu-more-btn.png);	
 }
-.index-menu .menu-more-btn .btn-line{
+.index-menu  .icon1{
+	display: inline-block;
+	width: 11px;
+	height:7px;
+	margin-left: 10px;	
+}
+.index-menu  .btn-line{
 	padding-left: 14px;
 }
 .index-panel{
@@ -168,9 +239,11 @@
 	background: #dedede;
 	border-radius: 50%;
 	*margin-top: 11px;
+	cursor: pointer;
 }
 .index-panel-header .active{
 	background: #9b9b9b;
+	cursor: pointer;
 }
 .index-panel-body{
 	margin-top: 128px;
@@ -199,25 +272,25 @@
 	float: right;
 }
 .index-food-list .food-item .star-bar{
-	/*width: 230px;
-	height: 13px;*/
 	font-size: 0;
 }
-.index-food-list .food-item .star-bar .star{
+.star{
 	display: inline-block;
 	width: 12px;
 	height: 13px;
 	margin-right: 5px;
 	background-image: url(../img/red_star.png);
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
-.index-food-list .food-item .nostar{
+.nostar{
 	display: inline-block;
 	width: 12px;
 	height: 13px;
 	margin-right: 5px;
 	background-image: url(../img/gray_star.png);
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
 .index-pics{
 	height: 382px;
@@ -236,3 +309,22 @@
 .index-pics .pics-col-l{
 	width: 460px;
 }
+.displaynone{
+	display: none!important;
+}
+.displaynone1{
+	display: none!important;
+}
+#btn {
+	width:40px; 
+    height:40px; 
+    position:fixed; 
+    right:30px; 
+    bottom:10px; 
+    display:block; 
+    background:url(../img/top_bg.png) no-repeat;
+   /* display: none;*/
+}
+#btn:hover {
+	background:url(../img/top_bg.png) no-repeat 0 -39px;
+	}

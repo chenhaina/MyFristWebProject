@@ -21,17 +21,79 @@
 	float: left;
 	margin-top: 42px;
 	margin-left: 50px;
-	font-size: 17px;
-	
-	
-	
+	font-size: 17px;	
 }
 .public-header  .header-nav  a{
 	color: #3b3b3b;
+	margin-bottom: 16px;
 	}
 	.public-header  .header-nav  a:hover{
-		text-decoration: underline;
+		text-decoration: none;
+		
 	}
+.none{
+	display: none;
+}
+/*.navication{
+	width:560px;
+	height:96px ;
+}*/
+.header-nav li.active{
+	/*background: #999395;*/
+	border-bottom: 3px solid #F34949;
+	color: #F34949;
+	
+}
+.header-nav li:hover{
+	border-bottom: 3px solid #F34949;
+	color: #F34949;
+}
+#sub{
+	width: 534px;
+	position: absolute;
+    border: ;1px solid #f7f7f7;
+    box-shadow: 2px 0 5px rgba(0,0,0,.3);
+    right: 0px;
+    top: 86px;
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 2;
+    background: white;
+    padding: 10px;
+}
+.sub_content dt a{
+	font-size: 16px;
+	color: #666;
+	text-decoration: none;
+}
+.sub_content dd a{
+	padding: 0 10px;
+	margin: 4px 0;
+	font-size: 14px;
+	margin-top: 10px;
+}
+.sub_content  a:hover{
+	color: #F34949;
+}
+.sub_content dl{
+	overflow: hidden;
+	float: left;
+	
+}
+.sub_content dt{
+	width: 70px;
+    font-weight:bold;
+	position: relative;
+	margin-right: 46px;
+	
+}
+.sub_content dd{
+	float: left;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	
+}
+
 .public-container{
 	width: 1100px;
 	position:relative;
@@ -61,8 +123,7 @@
 	margin-right: 0;
 	color: #FFFFFF;
 	width: 230px;
-	float: left;
-	
+	float: left;	
 	font-size: 14px;
 	line-height: 1.8;
 	

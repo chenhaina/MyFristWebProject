@@ -38,6 +38,7 @@
 	width:560px;
 	height:96px ;
 }*/
+.navication{position:relative;}
 .header-nav li.active{
 	/*background: #999395;*/
 	border-bottom: 3px solid #F34949;
@@ -54,7 +55,7 @@
     border: ;1px solid #f7f7f7;
     box-shadow: 2px 0 5px rgba(0,0,0,.3);
     right: 0px;
-    top: 86px;
+    top: 82px;
     box-sizing: border-box;
     margin: 0;
     z-index: 2;

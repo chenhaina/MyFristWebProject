@@ -37,6 +37,7 @@ $(document).ready(function(){
 	var $starBars=$(el);
 	$starBars.each(function(index){
 		$starBar = $(this);
+		console.log(this)
 		var $itemstar=$starBar.find('.nostar');
 		var lightOn=function(num){
 		  $itemstar.each(function(index){
@@ -53,10 +54,14 @@ $(document).ready(function(){
 		.on("click",".nostar",function(){
 			num=$(this).index()+1;
 			lightOn(num);
-	    console.log("click in num " + num);
+			console.log($(this).index());
+	   		console.log("click in num " + num);
 		}).on("click",".star",function(){
 			num=$(this).index()+1;
-			lightOn(num);		
+			lightOn(num);
+			console.log($(this).index());
+	   		console.log("click in num " + num);
+			
 		})
 		})
    	}
@@ -65,15 +70,15 @@ $(document).ready(function(){
 	};
 })();
 rating.init('.star-bar',3);
-rating.init('.star-bar1',3);
-rating.init('.star-bar2',3);
-rating.init('.star-bar3',3);
 })
 $(document).ready(function(){
+	var cWidth=document.documentElement.clientWidth;
+	$('.img').css('width',cWidth)
+	$('.index-banner-bg').css('width',cWidth*7)
 	var sub=$('#sub');
 	var activeRow;
 	var activeMenu;
-	$('.navication li').on('mouseenter',function(e){
+	$('.navication').on('mouseenter',function(e){
 		sub.removeClass('none')
 	}).on('mouseleave',function(e){
 		sub.addClass('none')
@@ -86,7 +91,7 @@ $(document).ready(function(){
 			activeMenu=null;	
 		}
 	})
-	$('.navication ul').on('mouseover','li',function(e){
+	$('.navication').on('mouseover','li',function(e){
 		if(!activeRow){//没有放上去的时候，第一次
 			activeRow=$(e.currentTarget).addClass('active')
 			activeMenu=$('#'+activeRow.data('id'))
@@ -112,8 +117,7 @@ $(document).ready(function(){
             var len = 5;
             var interval =3000;
             var timer;
-
-
+            
             function animate (offset) {
                 var left = parseInt(list.css('left')) + offset;
                 if (offset>0) {
@@ -123,11 +127,11 @@ $(document).ready(function(){
                     offset = '-=' + Math.abs(offset);
                 }
                 list.animate({'left': offset}, 300, function () {
-                    if(left > -1347){
-                        list.css('left', -1347 * len);
+                    if(left > -cWidth){
+                        list.css('left', -cWidth * len);
                     }
-                    if(left < (-1347 * len)) {
-                        list.css('left', -1347);
+                    if(left < (-cWidth * len)) {
+                        list.css('left', -cWidth);
                     }
                 });
             }
@@ -156,7 +160,7 @@ $(document).ready(function(){
                 else {
                     index += 1;
                 }
-                animate(-1347);
+                animate(-cWidth);
                 showButton();
             });
 
@@ -170,7 +174,7 @@ $(document).ready(function(){
                 else {
                     index -= 1;
                 }
-                animate(1347);
+                animate(cWidth);
                 showButton();
             });
 
@@ -180,7 +184,7 @@ $(document).ready(function(){
                          return;
                      }
                      var myIndex = parseInt($(this).attr('index'));
-                     var offset = -1347 * (myIndex - index);
+                     var offset = -cWidth * (myIndex - index);
 
                      animate(offset);
                      index = myIndex;
@@ -209,21 +213,22 @@ var cheight=document.documentElement.clientHeight;
 		else{
 			btn.style.display="none";
 		}
-	if(!istop){
-		clearInterval(timer);
+		if(!istop){
+			clearInterval(timer);
+		}
+		istop=false;
 	}
-	istop=false;
-}
 	
 	btn.onclick=function(){
 		timer=setInterval(function(){
 			var ostop=document.documentElement.scrollTop||document.body.scrollTop;
 			var speed=Math.ceil(ostop/8);
 			istop=true;
-		document.documentElement.scrol=document.body.scrollTop=ostop-speed;
+		document.documentElement.scrollTop=document.body.scrollTop=ostop-speed;
 		console.log(ostop-speed)
 		if(ostop==0){
 			clearInterval(timer);
+			console.log(istop);
 		}
 		},30)		
 	}
